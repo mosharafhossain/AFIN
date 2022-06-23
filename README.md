@@ -1,7 +1,7 @@
 A Question-Answer Driven Approach to Reveal Affirmative Interpretations from Verbal Negations
 ============================================================================================================
 
-This repository will contain the code and corpus of the NAACL 2022 (Findings) paper "A Question-Answer Driven Approach to Reveal Affirmative Interpretations from Verbal Negations."  
+This repository contains the code and corpus of the NAACL 2022 (Findings) paper "A Question-Answer Driven Approach to Reveal Affirmative Interpretations from Verbal Negations."  
 Authors: Md Mosharaf Hossain, Luke Holman, Anusha Kakileti, Tiffany Iris Kao, Nathan Raul Brito, Aaron Abraham Mathews, and Eduardo Blanco  
 Arxiv Link: https://arxiv.org/pdf/2205.11467.pdf  
 
@@ -47,7 +47,7 @@ cd ../../../
 	config_path: path to the configuration file (required)
 ```
   
-- Generate affirmative interpretations from negations
+- Generate affirmative interpretations from negations:  
 ```bash 
   # Setup: without verb
   python generate.py --config_path ./config/config_without_verb.json
