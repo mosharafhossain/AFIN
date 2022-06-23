@@ -1,0 +1,1 @@
+T5-Large can be downloaded from https://huggingface.co/t5-large.
