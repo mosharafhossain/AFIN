@@ -1,0 +1,55 @@
+{
+	"problem_name": "afin",
+	"verb_included": true,
+	
+	"seed": 42,
+    "train_shuffle": true,
+    "use_gpu": true,
+    "device": 0,
+    "use_multi_gpus": false,	
+	
+    "learning_rate": 1e-5,
+    "optimizer": "Adafactor",  
+    "adam_epsilon": 1e-8, 
+    "weight_decay": 5e-6, 
+    "warmup_epoch": 5, 
+	"accumulate_step": 1,
+    "grad_clipping":5.0,	
+    
+	"max_epoch": 50,
+	"epochs_no_eval": 0, 
+	"patience": 10,
+    "batch_size": 4,
+	"is_model_tuning": true,
+	
+    "input_len": {
+		          "afin": 129
+				 },
+    "target_len": {
+	               "afin": 50
+			      },
+		
+    "num_beams": null,
+    "do_sample": true,
+    "early_stopping": true,
+    "top_k": 50,
+    "top_p": 0.95,
+    "repetition_penalty": 2.5,
+    "num_return_sequences": 3,      
+	
+	"T5_type": "large",
+    "T5_path": {
+	            "large": "./model/pre-trained/T5-large"
+			   },    
+    
+    "data_path": {
+		"train": "./data/splits/train.jsonl",
+		"dev": "./data/splits/dev.jsonl",
+		"test": "./data/splits/test.jsonl"
+	},
+    "output_path": {
+		"dev": "./output/dev/with_verb.jsonl",
+		"test": "./output/test/with_verb.jsonl"		 
+	},
+	"best_model_path": "./model/fine-tuned/with_verb/best_model.bin"
+  }
